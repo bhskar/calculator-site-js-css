@@ -1,0 +1,17 @@
+.calculator {
+  padding: 12px;
+  border-radius: 1em;
+  height: 280px;
+  width: 200px;
+  margin: auto;
+  background-color: #17257e;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.display-box {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #3e22c7;
+  border: solid black 0.5px;
+  color: black;
+  height: 65%;
+}
