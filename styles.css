@@ -33,3 +33,10 @@ input[type=button] {
   height: 70%;
   outline: none;
 }
+
+input:active[type=button] {
+  background: #e76b6b;
+  -webkit-box-shadow: inset 0px 0px 5px #362424;
+  -moz-box-shadow: inset 0px 0px 5px #805353;
+  box-shadow: inset 0px 0px 5px #bc6d6d;
+}
