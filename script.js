@@ -9,6 +9,7 @@ function display(value) {
 }
 
 //This function evaluates the expression and returns result
+
 // function calculate() {
 //   let a = document.getElementById("result").value;
 //   let b = eval(a);
@@ -18,6 +19,14 @@ function display(value) {
 function calculate() {
   const inputElement = document.getElementById("result");
   const expression = inputElement.value;
+  const pattern = /^[\d+\-*/.\s]+$/;
+
+  // Validate the input format
+  if (!pattern.test(expression)) {
+    alert("Invalid input format. Please enter a valid mathematical expression.");
+    return;
+  }
+
   const result = Function(`return ${expression}`) ();
   inputElement.value = result;
 }
