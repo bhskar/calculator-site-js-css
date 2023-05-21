@@ -19,15 +19,21 @@ function display(value) {
 function calculate() {
   const inputElement = document.getElementById("result");
   const expression = inputElement.value;
-  const pattern = /^[\d+\-*/.\s]+$/;
 
   // Validate the input format
+  const pattern = /^[\d+\-*/.\s]+$/;
   if (!pattern.test(expression)) {
     alert("Invalid input format. Please enter a valid mathematical expression.");
     return;
   }
 
-  const result = Function(`return ${expression}`) ();
+  // Step 4: Parse and evaluate the expression
+  try {
+    const result = Function(`return ${expression}`)();;
+  } catch (error) {
+    alert("Error evaluating the expression. Please check your input.");
+    return;
+  }
+
   inputElement.value = result;
 }
-
